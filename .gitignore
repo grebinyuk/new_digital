@@ -1,0 +1,9 @@
+/node_modules/
+
+/.git/
+/app/css/
+/**/_backstage
+/**/package-lock.json
+/**/Thumbs.db
+/**/*.DS_Store
+/src/fonts/fontawesome/
