@@ -4,30 +4,325 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-  .feature-posts
-    padding: 1em 0 0 0
+  /*SMALL HEADER*/
   #header-menu
+    li
+      &:not(:last-child)
+        margin-right: 1.5em
+
+
+
+      /*розділ FEATURE POSTS*/
+  .feature-posts
+    font-size: 0.8rem
+
+      /*--розділ ABOUT US --*/
+  .section-container
+    font-size: 0.9em
+
+        /*--розділ POSTS STAART --*/
+  .section-pssts-container
+    font-size: 0.9rem
+  .posts-start-box
+    font-size: 0.9em
+
+      /*-- розділ ABOUT US --*/
+  .section-title
+    font-size: 2.8em
+
+
+
+          /*-- розділ BENEFITS --*/
+  .s-benefits-container
+    font-size: 0.9rem
+  .bnf-benefits-box
+    font-size: 0.9em
+
+    // іконки в кінці розділу
+  .s-icons-end-container
+    font-size: 0.8rem
+
+
+
+        /*FOOTER*/
+  #footer-menu
+    li
+      &:not(:last-child)
+        margin-right: 1.5em
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+
+
+  /*SMALL HEADER*/
+  #header-menu
+    font-size: 1.15em
     li
       &:not(:last-child)
         margin-right: 1em
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-  /**/
 
 
+
+      /*--  розділ FAQ --*/
+  .acord-container
+    padding-left: 3%
+    label
+      font-size: 1.8em
+      line-height: 1.8em
+
+
+
+
+    /*FOOTER HEADER*/
+  #footer-menu
+    font-size: 1.15em
+    li
+      &:not(:last-child)
+        margin-right: 1em
+
+  .footer-social-icons
+    .social-icon
+        font-size: 1.1em
+        line-height: 1.5em
+    .social-icon:not(:last-child)
+        margin-right: 8px
+
+  .footer-logo
+    font-size: 2em
+    margin-left: 0.5em
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-  /**/
+  /*SMALL HEADER*/
+  .small-header
+    font-size: 0.75rem
+    .social-icon
+      margin-top: 14%
+
+  .contacts-wrapper
+    .header-contact:first-child
+      margin-right: 1.4em
+        /*змінюємо висоту ГОЛОВНОГО МЕНЮ*/
+  .nav-row
+    height: 110px
+
+  .header-nav
+    flex-direction: column
+  .logo
+    padding-left: 0
 
 
+
+        /*розділ FEATURE POSTS*/
+  .feature-posts
+    padding: 3em 0 3em 0
+    font-size: 0.6rem
+    a
+      font-size: 1.45em
+
+
+    /*-- розділ ABOUT US --*/
+  .section-title
+    font-size: 2.2em
+
+
+
+
+    /*--розділ POSTS STAART --*/
+  .posts-start-title
+    font-size: 2em
+
+  .posts-start-box
+    flex-direction: column
+    justify-content: flex-end
+    flex-wrap: wrap
+    max-height: 600px
+    font-size: 0.75em
+
+  .posts-start-item
+    width: 40%
+
+  .triangle-box
+    margin-top: 0
+
+  .text-box
+    height: 80px
+
+  .clip-path
+    position: absolute
+    top: 20%
+    left: 6%
+    width: 100px
+    height: 60px
+
+  .icon-content, .icon-pay, .icon-ellipse, .icon-procent
+    font-size: 2em
+
+
+  /*-- розділ BENEFITS --*/
+  .bnf-benefits-box
+    justify-content: center
+    align-items: center
+    margin-top: 2em
+    font-size: 0.75em
+
+  .bnf-benefits-item
+    display: block
+    width: 45%
+    margin: 0
+
+  .bnf-triangle-box
+    margin: 0 auto
+
+  .bnf-text-box
+    margin: 0 auto
+
+  .benefits-title
+    font-size: 2.2em
+
+  .bnf-h2, .bnf-posts-paragraph
+    text-align: center
+
+
+      /*--  розділ FAQ --*/
+  .acord-container
+    label
+      font-size: 1.2em
+      line-height: 1.2em
+  article
+    p
+    line-height: 1.2
+    font-size: 1em
+    //ІКОНКИ В КІНЦІ
+  .icn-end-box
+    font-size: 0.75em
+    .end-text-box
+      font-size: 0.75em
+
+
+
+        /*FOOTER*/
+
+  .footer-row
+    height: 170px
+
+  .footer-box
+    flex-direction: column
+  .footer-logo
+    padding-left: 0
+    margin: 0.3em 0
+
+  .footer-social-icons
+    margin-bottom: 1em
+    .social-icon:not(:last-child)
+      margin-right: 2em
+  #footer-menu
+    li
+      &:not(:last-child)
+        margin-right: 1.3em
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
   /**/
+    /*SMALL HEADER*/
+  .small-header
+    font-size: 0.65rem
+  .social-icons-wrapper
+
+  #header-menu
+    font-size: 0.8em
+  .contacts-wrapper
+    .header-contact:first-child
+      margin-right: 1em
 
 
+
+    /*розділ FEATURE POSTS*/
+  .feature-posts
+    padding: 3em 0 3em 0
+    font-size: 0.4rem
+    a
+      font-size: 1.3em
+      &::before
+        left: -0.8em
+    a:last-child::before
+      left: -0.85em
+
+
+    /*--розділ ABOUT US --*/
+  .s-posts-start
+    margin-top: 2em
+  .illustration
+    width: 0
+    display: none
+  .section-content
+    max-width: 100%
+    margin-left: 10px
+    margin-right: 10px
+  .section-title
+    font-size: 1.8em
+
+
+
+    /*--розділ POSTS STAART --*/
+
+  .posts-start-box
+    max-height: 500px
+    font-size: 0.65em
+
+  .text-box
+    height: 50px
+    font-size: 0.9em
+
+  .clip-path
+    top: 30%
+    left: 10%
+    width: 90px
+    height: 50px
+
+  .icon-content, .icon-pay, .icon-ellipse, .icon-procent
+    font-size: 1.8em
+
+
+
+    /*-- розділ BENEFITS --*/
+  .bnf-triangle-box
+    margin: 0 auto
+
+  .bnf-text-box
+    text-align: center
+    font-size: 0.8em
+    margin: 0 auto
+
+  .benefits-title
+    font-size: 2em
+
+
+
+        //ІКОНКИ В КІНЦІ
+  .icn-end-box
+    font-size: 0.55em
+    .end-text-box
+      font-size: 0.9em
+
+  .icn-end-item
+    width: 30%
+
+  .icon-edu, .icon-guest, .icon-news
+    font-size: 1.8em
+
+  .s-icons-end
+    display: none
+
+                        // footer
+  #footer-menu
+    li
+      font-size: 0.65em
+      &:not(:last-child)
+        margin-right: 1em
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

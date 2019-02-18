@@ -3,13 +3,10 @@
 @import "_vars"
 
 
-
-
 *
   box-sizing: border-box
   &::before, &::after
   box-sizing: border-box
-
 
 html, body
   height: 100%
@@ -21,10 +18,6 @@ body
   min-width: 320px
   padding: 0
   position: relative
-  //line-height: 1.75
-//overflow: hidden
-  opacity: 1
-  font-family: sans-serif
 
 .h1, .h2, .h3, .h4, .h5, .h6
 	line-height: 1.4
@@ -32,18 +25,19 @@ body
 
 ul
   list-style: none
+  padding: 0
 
 a
   text-decoration: none
   outline: none
 
-//Контейнер для встановлення background секції на всю ширину екрану
+
+//Контейнер який розтягує секцію на всю ширину екрану
 %row
   width: 100%
   min-width: 320px
 
-
-//клас який задає обмеження максимальної і мінімальної ширини блоку
+//клас який задає стилі основного контейнера
 %container
   max-width: 1170px
   width: 100%
@@ -67,6 +61,10 @@ a
     vertical-align: bottom
     color: white
     opacity: 1
+
+
+
+
 
 .wrapper
   width: 100vw
@@ -136,14 +134,16 @@ a
   @extend %container
   @extend %header_flex-container
   height: 100%
-  padding-left: 42px
   align-items: center
+
 
       // ЛОГОТИП
 .logo
   font-family: 'montserrat', sans-serif
   font-weight: bold
   font-size: 2.25em
+  padding-top: 10px
+  padding-left: 42px
   color: $accent-blue
   span:last-child
     color: $dodger-blue
@@ -152,10 +152,10 @@ a
 #header-menu
   list-style: none
   margin-right: 2%
+  font-size: 1.25em
   li
     display: inline-block
     font-family: 'SourceSansPro', sans-serif
-    font-size: 1.25em
     cursor: pointer
     &:not(:last-child)
       margin-right: 3em
@@ -171,11 +171,10 @@ a
                     /*розділ FEATURE POSTS*/
 .f-posts-box
   @extend %row
-  height: 700px
+  max-height: 700px
   background-image:  $blue-gradient
   z-index: 135
   overflow: hidden
-
 
 .layer___3
   background: linear-gradient(to right, #0c3894, #208fc2)
@@ -190,7 +189,7 @@ a
   width: 100%
   max-width: 1170px
   margin: 0 auto
-  padding: 5em 0 0 0
+  padding: 5em 0 5em 0
   font-family: 'montserrat', sans-serif
   font-size: 1rem
   color: white
@@ -210,27 +209,27 @@ a
     color: red
     background-color: white
     display: inline-block
-    padding-left: 1.8em
+    padding-left: 2em
     border-top-left-radius: 10px
     border-bottom-left-radius: 10px
     z-index: 900
     &::before
       content: ""
       position: absolute
-      top: 30%
-      left: 30px
-      width: 30px
-      height: 30px
+      top: 23%
+      left: 0.65em
+      width: 0.85em
+      height: 0.85em
       background-color: #155ea8
       border-radius: 50%
     &::after
       content: ""
       position: absolute
       width: 1.182em
-      height: 1.182em
+      height: 1.2em
       top: .155em
       right: -0.6em
-      border-radius: 10px
+      border-radius: 0.625em
       background-color: white
       transform: rotate(45deg)
       z-index: -1
@@ -251,32 +250,31 @@ a
     font-size: 1.7em
     z-index: 140
     &:not(:last-child)
-      margin-right: 100px
+      margin-right: 10vw
     &::before
       content: ''
       display: block
       position: absolute
-      top: -10px
-      left: -45px
+      top: -0.5em
+      left: -1.5em
       width: 0
       height: 0
       opacity: 0.5
       border-left: solid 3em #48b8ff
-      //border-top: 3em red solid
       border-bottom: 3em transparent solid
       z-index: -1
-      transform: rotate(86deg)
+      transform: rotate(96deg)
     i
       position: relative
-      margin-right: 2em
+      margin-right: 1.2em
       color: white
       width: 25px
       height: 25px
       z-index: 220
   a:last-child::before
-    top: -15px
-    left: -50px
-    transform: rotate(110deg)
+    top: -0.7em
+    left: -1.7em
+    transform: rotate(120deg)
 
 
 
@@ -288,6 +286,7 @@ a
 .s-posts-start
   @extend %row
   margin-bottom: 1.5em
+  margin-top: 3em
 
 .section-pssts-container
   @extend %container
@@ -300,7 +299,6 @@ a
   font-size: 3em
   text-align: center
   color: black
-
   span
     color: #fa4a33
 //
@@ -309,26 +307,13 @@ a
   justify-content: space-between
   width: 100%
   margin-top: 1.5em
-
+//
 .posts-start-item
   width: 20%
   margin: 0 1em
   text-align: center
 
-.text-box
-  min-height: 100px
-  height: 10em
-  max-height: 12em
-  padding-bottom: 1.5em
-
-.posts-paragraph
-  font-family: 'SourceSansPro', sans-serif
-  font-weight: bold
-  font-size: 1.2em
-  line-height: 1.5
-  text-align: center
-
-//задаємо розміри елемента
+//задає стилі трикуному градієнту
 .triangle-box
   position: relative
   background-color: transparent
@@ -348,6 +333,22 @@ a
   background-image: linear-gradient(to right, #3d6ddc, #16a2eb)
   clip-path: polygon(50% 0%, 100% 100%, 0% 100%)
   z-index: -1
+
+  //Розміри текстової частини
+.text-box
+  min-height: 50px
+  height: 10em
+  max-height: 12em
+  padding-bottom: 1.5em
+
+.posts-paragraph
+  font-family: 'SourceSansPro', sans-serif
+  font-weight: bold
+  font-size: 1.2em
+  line-height: 1.5
+  text-align: center
+
+
 
                       // ITEM-1
 .trg-rotate-itm-1
@@ -400,7 +401,8 @@ a
 
 .s-contact-us
   @extend %row
-
+  margin-top: 3em
+  
 .section-contact-container
   @extend %container
   padding: 1em 0
@@ -485,12 +487,10 @@ a
 
 
 
-
-
-
                 /*--розділ ABOUT US --*/
 .s-about-us
   @extend %row
+  margin-top: 3em
 
 .section-container
   @extend %container
@@ -506,19 +506,18 @@ a
   max-width: 40%
   margin: 0 2em
   img
-    width: 480px
-    height: 320px
+    width: 35vw
+    height: 23vw
     box-shadow: 0 0 30px 5px #d8d8d8, 5px 5px 0 10px white
 .illustration::after
   content: ''
   display: inline-block
   position: absolute
-  width: 480px
-  height: 320px
+  width: 35vw
+  height: 23vw
   top: 27px
   left: 27px
   z-index: -1
-  background-color: red
   background-image: linear-gradient(to right, #0c3894, #208fc2)
 
 //основний текст
@@ -528,6 +527,7 @@ a
 
 .section-title
   font-family: "montserrat", sans-serif
+  margin-top: 0
   font-size: 3.1em
   font-weight: 900
   text-align: left
@@ -702,12 +702,13 @@ a
                   /*--  розділ FAQ --*/
 .s-faq
   @extend %row
+  margin-top: 3em
 
-  .s-faq-container
-    @extend %container
-    padding: 2em 0
-    height: 600px
-    font-size: 1rem
+.s-faq-container
+  @extend %container
+  padding: 2em 0
+  max-height: 600px
+  font-size: 1rem
 
 .faq-title
   @extend .posts-start-title
@@ -741,8 +742,9 @@ a
     border-bottom: none
 .acord-container
   label:hover::after, input:checked + label:hover::after
-    content: ''
+    content: '\f107'
     position: absolute
+    font-family: fontawesome
     width: 24px
     height: 24px
     right: 13px
@@ -750,6 +752,7 @@ a
     background: transparent url(http://netcribe.com/example/arrow_down.png) no-repeat center center
 .acord-container
   input:checked + label:hover::after
+    content: ' \f106 '
     background-image: url(http://netcribe.com/example/arrow_up.png)
 .acord-container
   input
@@ -794,6 +797,8 @@ article
 // решта стилів наслідувана від рзділу ABOUT US
 
 
+
+                          // іконки в кінці розділу
 .s-icons-end
   @extend %row
 
