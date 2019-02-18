@@ -4,6 +4,7 @@
 
 
 
+
 *
   box-sizing: border-box
   &::before, &::after
@@ -28,3 +29,904 @@ body
 .h1, .h2, .h3, .h4, .h5, .h6
 	line-height: 1.4
 	text-transform: uppercase
+
+ul
+  list-style: none
+
+a
+  text-decoration: none
+  outline: none
+
+//Контейнер для встановлення background секції на всю ширину екрану
+%row
+  width: 100%
+  min-width: 320px
+
+
+//клас який задає обмеження максимальної і мінімальної ширини блоку
+%container
+  max-width: 1170px
+  width: 100%
+  min-width: 320px
+  margin: 0 auto
+
+%header_flex-container
+  display: flex
+  justify-content: space-between
+
+//шаблон для  іконок
+%icon-template
+  &::before
+    content: ''
+    background-repeat: no-repea
+    background-position: center center
+    background-size: contain
+    width: 1em
+    height: 1em
+    display: inline-block
+    vertical-align: bottom
+    color: white
+    opacity: 1
+
+.wrapper
+  width: 100vw
+
+
+.small-header-row
+  @extend %row
+  background-color: #292929
+  height: 45px
+
+//Контейнер для small-header
+.small-header
+  @extend %container
+  @extend %header_flex-container
+  padding: 0 2%
+  font-family: 'ProximaNova', sans-serif
+  font-size: 1rem
+
+                      //small-header social icons
+.social-icons-wrapper
+  .social-icon
+    display: inline-block
+    width: 1.8em
+    height: 1.8em
+    padding: 0.1em
+    margin-top: 8%
+    border-radius: 50%
+    font-size: 1em
+    line-height: 1.8em
+    text-align: center
+    color: #FFFFFF
+  .social-icon:not(:last-child)
+    margin-right: 8px
+
+.twitterr
+  background: #4099FF
+
+.facebook
+  background: #3B5998
+
+.google-plus
+  background: #dd4b39
+
+
+                  //блок skype-email
+.contacts-wrapper
+  .header-contact
+    line-height: 45px
+    color: white
+    span
+      margin-left: 7px
+  .header-contact:first-child
+    margin-right: 55px
+
+.fa-envelope
+  color: #9ee6ff
+
+
+            /*ГОЛОВНЕ МЕНЮ*/
+.nav-row
+    @extend %row
+    background-color: #fff
+    height: 135px
+    border-bottom: solid 8px #009ce3
+
+.header-nav
+  @extend %container
+  @extend %header_flex-container
+  height: 100%
+  padding-left: 42px
+  align-items: center
+
+      // ЛОГОТИП
+.logo
+  font-family: 'montserrat', sans-serif
+  font-weight: bold
+  font-size: 2.25em
+  color: $accent-blue
+  span:last-child
+    color: $dodger-blue
+
+        // МЕНЮ
+#header-menu
+  list-style: none
+  margin-right: 2%
+  li
+    display: inline-block
+    font-family: 'SourceSansPro', sans-serif
+    font-size: 1.25em
+    cursor: pointer
+    &:not(:last-child)
+      margin-right: 3em
+    a
+      color: #3c3c3c
+
+
+
+
+
+
+
+                    /*розділ FEATURE POSTS*/
+.f-posts-box
+  @extend %row
+  height: 700px
+  background-image:  $blue-gradient
+  z-index: 135
+  overflow: hidden
+
+
+.layer___3
+  background: linear-gradient(to right, #0c3894, #208fc2)
+  background-image:  url("../img/Layer-3-copy-4.png"), url("../img/Layer-3-copy-5.png"), url("../img/Layer-3.png"), linear-gradient(to right, #0c3894, #208fc2)
+  background-position:  50%, 80% bottom, bottom
+  background-size: cover, contain, contain
+  background-repeat: no-repeat, no-repeat, no-repeat
+  background-blend-mode: soft-light,lighten
+
+.feature-posts
+  height: 100%
+  width: 100%
+  max-width: 1170px
+  margin: 0 auto
+  padding: 5em 0 0 0
+  font-family: 'montserrat', sans-serif
+  font-size: 1rem
+  color: white
+  text-align: center
+  h1
+    margin: 0
+    font-size: 5em
+    font-weight: 900
+    line-height: 1.5
+    text-transform: uppercase
+  h2
+    position: relative
+    margin: 0
+    font-size: 3em
+    font-weight: 900
+    line-height: 1.5
+    color: red
+    background-color: white
+    display: inline-block
+    padding-left: 1.8em
+    border-top-left-radius: 10px
+    border-bottom-left-radius: 10px
+    z-index: 900
+    &::before
+      content: ""
+      position: absolute
+      top: 30%
+      left: 30px
+      width: 30px
+      height: 30px
+      background-color: #155ea8
+      border-radius: 50%
+    &::after
+      content: ""
+      position: absolute
+      width: 1.182em
+      height: 1.182em
+      top: .155em
+      right: -0.6em
+      border-radius: 10px
+      background-color: white
+      transform: rotate(45deg)
+      z-index: -1
+  p
+    font-family: 'SourceSansPro', sans-serif
+    font-weight: 500
+    font-size: 2.3em
+    line-height: 1.5
+  h3
+    font-family: 'montserrat', sans-serif
+    font-weight: bold
+    font-size: 2.25em
+    margin-bottom: 1.8em
+    z-index: 900
+  a
+    position: relative
+    color: white
+    font-size: 1.7em
+    z-index: 140
+    &:not(:last-child)
+      margin-right: 100px
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      top: -10px
+      left: -45px
+      width: 0
+      height: 0
+      opacity: 0.5
+      border-left: solid 3em #48b8ff
+      //border-top: 3em red solid
+      border-bottom: 3em transparent solid
+      z-index: -1
+      transform: rotate(86deg)
+    i
+      position: relative
+      margin-right: 2em
+      color: white
+      width: 25px
+      height: 25px
+      z-index: 220
+  a:last-child::before
+    top: -15px
+    left: -50px
+    transform: rotate(110deg)
+
+
+
+
+
+
+
+                                    /*--розділ POSTS STAART --*/
+.s-posts-start
+  @extend %row
+  margin-bottom: 1.5em
+
+.section-pssts-container
+  @extend %container
+  font-size: 1rem
+
+.posts-start-title
+  margin: 0
+  font-family: 'montserrat', sans-serif
+  font-weight: 900
+  font-size: 3em
+  text-align: center
+  color: black
+
+  span
+    color: #fa4a33
+//
+.posts-start-box
+  display: flex
+  justify-content: space-between
+  width: 100%
+  margin-top: 1.5em
+
+.posts-start-item
+  width: 20%
+  margin: 0 1em
+  text-align: center
+
+.text-box
+  min-height: 100px
+  height: 10em
+  max-height: 12em
+  padding-bottom: 1.5em
+
+.posts-paragraph
+  font-family: 'SourceSansPro', sans-serif
+  font-weight: bold
+  font-size: 1.2em
+  line-height: 1.5
+  text-align: center
+
+//задаємо розміри елемента
+.triangle-box
+  position: relative
+  background-color: transparent
+  width: 120px
+  height: 110px
+  margin: 3em auto 0  auto
+  line-height: 70px
+
+//трикутний фон з градієнтом
+.clip-path
+  position: absolute
+  top: 5%
+  left: 2%
+  width: 120px
+  height: 80px
+  background-color: red
+  background-image: linear-gradient(to right, #3d6ddc, #16a2eb)
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%)
+  z-index: -1
+
+                      // ITEM-1
+.trg-rotate-itm-1
+  transform: rotate(33deg)
+
+.icon-content
+  &::before
+    background: url("../img/icons/posts/svg/content.png") no-repeat
+  @extend %icon-template
+  font-size: 2.5em
+
+
+                      // ITEM-2
+.trg-rotate-itm-2
+  transform: rotate(33deg)
+
+.icon-pay
+  &::before
+    background: url("../img/icons/posts/svg/pay.svg") no-repeat
+  @extend %icon-template
+  font-size: 2.5em
+
+                            // ITEM-3
+.trg-rotate-itm-3
+  transform: rotate(-23deg)
+
+.icon-ellipse
+  &::before
+    background-image: url("../img/icons/posts/svg/ellipse.png")
+  @extend %icon-template
+  font-size: 2.3em
+
+                      // ITEM-4
+.trg-rotate-itm-4
+  transform: rotate(-23deg)
+
+.icon-procent
+  &::before
+    background-image: url("../img/icons/posts/svg/procent.png")
+  @extend %icon-template
+  font-size: 2.6em
+
+
+
+
+
+
+
+                      /*--розділ CONTACT US --*/
+
+.s-contact-us
+  @extend %row
+
+.section-contact-container
+  @extend %container
+  padding: 1em 0
+  height: 320px
+  font-size: 1rem
+
+.layer___33
+  background-image:  url("../img/Layer-3.png"), $blue-gradient
+  background-position: bottom
+  background-size: cover
+  background-repeat: no-repeat
+  background-blend-mode: soft-light
+
+.s-contacts-title
+  font-family: 'montserrat', sans-serif
+  font-weight: 900
+  font-size: 3em
+  text-align: center
+  color: white
+
+.contact-us-box
+  display: flex
+  justify-content: space-between
+  margin-top: 5em
+
+.section-contact-container
+  a
+    font-family: 'SourceSansPro', sans-serif
+    position: relative
+    color: white
+    font-size: 1.2em
+    z-index: 140
+    &:not(:last-child)
+      margin-right: 100px
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      top: -10px
+      left: -25px
+      width: 0
+      height: 0
+      opacity: 0.5
+      border-left: solid 5em #48b8ff
+      border-bottom: 5em transparent solid
+      z-index: -1
+      transform: rotate(86deg)
+    i
+      position: relative
+      margin-right: 1.1em
+      font-size: 2em
+      color: white
+      width: 25px
+      height: 25px
+      z-index: 220
+  a:last-child::before
+    top: -35px
+    left: -55px
+    transform: rotate(110deg)
+
+.section-contact-container
+  .adrss-1
+    a
+      position: relative
+      top: -1.5em
+      display: inline-block
+      margin-right: 0.5em
+      &::before
+        left: -50px
+
+.adress
+  display: inline-block
+  span
+    display: block
+    font-family: 'SourceSansPro', sans-serif
+    line-height: 1.5
+    color: white
+    font-size: 1.2em
+
+
+
+
+
+
+
+
+
+                /*--розділ ABOUT US --*/
+.s-about-us
+  @extend %row
+
+.section-container
+  @extend %container
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  font-size: 1rem
+  margin-top: 50px
+
+//фотографія
+.illustration
+  position: relative
+  max-width: 40%
+  margin: 0 2em
+  img
+    width: 480px
+    height: 320px
+    box-shadow: 0 0 30px 5px #d8d8d8, 5px 5px 0 10px white
+.illustration::after
+  content: ''
+  display: inline-block
+  position: absolute
+  width: 480px
+  height: 320px
+  top: 27px
+  left: 27px
+  z-index: -1
+  background-color: red
+  background-image: linear-gradient(to right, #0c3894, #208fc2)
+
+//основний текст
+.section-content
+  max-width: 60%
+  padding: 1em
+
+.section-title
+  font-family: "montserrat", sans-serif
+  font-size: 3.1em
+  font-weight: 900
+  text-align: left
+
+.paragraph
+  font-family: "montserrat", sans-serif
+  font-size: 1.1em
+  font-weight: bold
+  text-align: left
+  line-height: 1.5
+  margin: 0.5em 0
+
+.button
+  display: inline-block
+  border-radius: 25px
+  padding: 0.7em 2em
+  outline: none
+  background-color: #fa4a33
+  font-style: 'SourceSansPro', sans-serif
+  font-size: 1.2em
+  color: white
+  box-shadow: 5px 7px 30px 0 #c3c0c0b5
+  margin: 2em 0
+  cursor: pointer
+  transition: All 0.3s ease
+  &:hover
+    border-radius: 30px
+    padding: 1em 2em
+    outline: none
+    cursor: pointer
+  &:active
+    background-color: blue
+
+
+
+
+
+                  /*--розділ WHY US --*/
+.s-why-us
+  @extend %row
+
+.s-why-us
+  .section-container
+    @extend %container
+    display: flex
+    justify-content: flex-start
+    flex-direction: row-reverse
+    align-items: center
+    font-size: 1rem
+    margin-top: 50px
+// решта стилів наслідувана від рзділу ABOUT US
+
+
+
+
+              <!--розділ BENEFITS -->
+
+.s-benefits
+  @extend %row
+  margin: 3em 0
+
+.s-benefits-container
+  @extend %container
+  font-size: 1rem
+  max-height: 600px
+
+.benefits-title
+  margin: 0
+  font-family: 'montserrat', sans-serif
+  font-weight: 900
+  font-size: 3em
+  text-align: center
+  color: black
+
+//
+.bnf-benefits-box
+  display: flex
+  justify-content: flex-start
+  flex-direction: row
+  flex-wrap: wrap
+  width: 100%
+  margin-top: 1.5em
+
+.bnf-benefits-item
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  width: 45%
+  margin: 0 1em 2em
+  text-align: center
+
+.bnf-text-box
+  width: 60%
+  min-height: 50px
+
+
+.bnf-h2
+  margin: 0
+  margin-bottom: 0.5em
+  font-size: 1.9em
+  color: #0d3693
+  text-align: left
+
+.bnf-posts-paragraph
+  font-family: 'SourceSansPro', sans-serif
+  font-weight: bold
+  font-size: 1.1em
+  line-height: 1.5
+  text-align: left
+  margin: 0
+
+//задаємо розміри елемента
+.bnf-triangle-box
+  position: relative
+  background-color: transparent
+  width: 120px
+  height: 110px
+  margin: auto
+  margin-right: 20px
+  line-height: 70px
+
+//трикутний фон з градієнтом
+.clip-path
+  position: absolute
+  top: 5%
+  left: 2%
+  width: 120px
+  height: 80px
+  background-color: red
+  background-image: linear-gradient(to right, #3d6ddc, #16a2eb)
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%)
+  z-index: -1
+
+.trg-rotate-itm-1
+  transform: rotate(33deg)
+
+
+                                      // ITEM-1
+.icon-promote
+  &::before
+    background: url("../img/icons/benefits/promote.png") no-repeat
+  @extend %icon-template
+  font-size: 2.5em
+
+                              // ITEM-2
+.icon-rep
+  &::before
+    background: url("../img/icons/benefits/rep.png") no-repeat
+  @extend %icon-template
+  font-size: 2.5em
+                                // ITEM-3
+.icon-search1
+  &::before
+    background: url("../img/icons/benefits/search.png") no-repeat
+  @extend %icon-template
+  font-size: 2.5em
+
+                                  // ITEM-4
+.icon-money
+  &::before
+    background: url("../img/icons/benefits/money.png") no-repeat
+  @extend %icon-template
+  font-size: 2.5em
+
+
+
+
+
+
+
+
+                  /*--  розділ FAQ --*/
+.s-faq
+  @extend %row
+
+  .s-faq-container
+    @extend %container
+    padding: 2em 0
+    height: 600px
+    font-size: 1rem
+
+.faq-title
+  @extend .posts-start-title
+  text-align: left
+  padding-left: 20%
+
+.acord-container
+  width: 80%
+  padding-left: 10%
+  margin: 2em auto 1.5em auto
+
+.acord-container
+  label
+    font-family: 'SourceSansPro', sans-serif
+    padding: 10px 0 0 0
+    position: relative
+    z-index: 20
+    display: block
+    height: auto
+    cursor: pointer
+    line-height: 2.1em
+    border-bottom: 1px solid lightgray
+    color: black
+    font-size: 2em
+    &:hover
+      color: grey
+
+.acord-container
+  input:checked + label, input:checked + label:hover
+    color: #0d3693
+    border-bottom: none
+.acord-container
+  label:hover::after, input:checked + label:hover::after
+    content: ''
+    position: absolute
+    width: 24px
+    height: 24px
+    right: 13px
+    top: 7px
+    background: transparent url(http://netcribe.com/example/arrow_down.png) no-repeat center center
+.acord-container
+  input:checked + label:hover::after
+    background-image: url(http://netcribe.com/example/arrow_up.png)
+.acord-container
+  input
+    display: none
+.acord-container
+  article
+    margin-top: -1px
+    overflow: hidden
+    height: 0px
+    position: relative
+    transition: height 0.3s ease-in-out
+    z-index: 10
+    border-bottom: 1px solid lightgray
+.acord-container
+  input:checked ~ article
+    height: 80px
+    transition: height 0.3s ease-inout
+
+article
+  p
+    font-family: 'SourceSansPro', sans-serif
+    color: black
+    line-height: 1.5
+    font-size: 1.2em
+
+
+
+
+                /*--розділ POST-NOW--*/
+.s-post-now
+  @extend %row
+
+.s-post-now
+  .section-container
+    @extend %container
+    display: flex
+    justify-content: flex-start
+    flex-direction: row-reverse
+    align-items: center
+    font-size: 1rem
+    margin-top: 50px
+// решта стилів наслідувана від рзділу ABOUT US
+
+
+.s-icons-end
+  @extend %row
+
+.s-icons-end-container
+  @extend %container
+  font-size: 1rem
+  margin-bottom: 5em
+
+.icn-end-box
+  display: flex
+  justify-content: space-between
+  width: 100%
+  margin: 1.5em 0
+
+.icn-end-item
+  width: 33%
+  margin: 0 1em
+  text-align: center
+
+.icn-end-item
+  .end-text-box
+    margin-top: 1.5em
+    h2
+      font-size: 1.5em
+      font-weight: 700
+      margin: 0 0 0 0.5em
+    .h2-end
+      color: blue
+      margin-bottom: 0.5em
+
+//стил параграфів
+.icn-end-paragraph
+  @extend .posts-paragraph
+  font-size: 1.2em
+                                // ITEM-1
+.end-rotate-itm-1
+  transform: rotate(33deg)
+
+.icon-guest
+  &::before
+    background: url("../img/icons/end-icons/guest.png") no-repeat
+  @extend %icon-template
+  font-size: 2.5em
+
+                        // ITEM-2
+.end-rotate-itm-2
+  transform: rotate(33deg)
+
+.icon-news
+  &::before
+    background: url("../img/icons/end-icons/news.png") no-repeat
+  @extend %icon-template
+  font-size: 2.5em
+
+                          // ITEM-3
+.end-rotate-itm-3
+  transform: rotate(33deg)
+
+.icon-edu
+  &::before
+    background: url("../img/icons/end-icons/edu.png") no-repeat
+  @extend %icon-template
+  font-size: 2.5em
+
+//решта стилів наслідувана від рзділу POSTS START
+
+
+
+
+
+
+
+
+    /*==== FOOTER ====*/
+
+.footer-row
+  @extend %row
+  background-color: black
+  height: 250px
+  font-size: 1rem
+
+.footer-box
+  @extend %container
+  @extend %header_flex-container
+  height: 100%
+  align-items: center
+
+          // ЛОГОТИП
+.footer-logo
+  font-family: 'montserrat', sans-serif
+  font-weight: bold
+  font-size: 2.25em
+  margin-left: 2.5em
+  color: #fff
+
+
+            // МЕНЮ
+#footer-menu
+  list-style: none
+  li
+    display: inline-block
+    font-family: 'SourceSansPro', sans-serif
+    font-size: 1em
+    cursor: pointer
+    &:not(:last-child)
+      margin-right: 3em
+    a
+      color: #fff
+
+  // social icons
+.footer-social-icons
+  .social-icon
+    display: inline-block
+    width: 1.8em
+    height: 1.8em
+    padding: 0.1em
+    border-radius: 50%
+    font-size: 1.5em
+    line-height: 1.8em
+    text-align: center
+    color: black
+    background-color: white
+  .social-icon:not(:last-child)
+    margin-right: 12px
+
+.twitterr
+  background: #4099FF
+
+.facebook
+  background: #3B5998
+
+.google-plus
+  background: #dd4b39
+
+
+@import "media"

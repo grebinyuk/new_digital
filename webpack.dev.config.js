@@ -12,7 +12,7 @@ module.exports = merge(common, {
   devServer: {
     hot: true,
     contentBase: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: '/'
   },
 
   module: {
@@ -32,10 +32,11 @@ module.exports = merge(common, {
                 },
 
                 {
-                  loader:' postcss-loader',
+                  loader: 'postcss-loader',
                   options: {
-                              plugins: [autoprefixer('last 2 version')],
-                            }
+                    plugins: [autoprefixer('last 2 version')],
+                    sourceMap: true
+                  }
                 },
 
                 {

@@ -5,7 +5,6 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
-
 module.exports = {
     entry: {
       index: ['./src/js/index.js','./src/sass/style.sass']
@@ -24,7 +23,7 @@ module.exports = {
         path.resolve(__dirname, 'src/fonts')
       ],
 
-      extensions: [ '.js', '.css', '.sass', '.scss', 'woff',  'woff2', 'ttf', 'eot', 'svg']
+      extensions: [ '.js', '.css', '.sass', '.scss', 'woff',  'woff2', 'ttf', 'eot', 'png', 'svg']
     },
 
     optimization: {
@@ -57,6 +56,7 @@ module.exports = {
 
         {
           test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+          exclude: /(img)/,
           use: [{
                   loader: 'file-loader',
                   options: {
@@ -67,12 +67,20 @@ module.exports = {
         },
 
         {
+          test: /\.svg$/,
+          exclude: /(node_modules)/,
+
+          use: 'svg-url-loader'
+        },
+
+        {
           test: /\.(png|gif|jpg|jpeg)$/,
           use: [{
                   loader: 'file-loader',
                   options: {
                               name: '[name].[ext]',
                               outputPath: './img/'
+
                             }
                }],
         }
@@ -92,4 +100,4 @@ module.exports = {
           }
       })
     ]
-};
+}
