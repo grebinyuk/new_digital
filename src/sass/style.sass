@@ -210,8 +210,8 @@ a
     background-color: white
     display: inline-block
     padding-left: 2em
-    border-top-left-radius: 10px
-    border-bottom-left-radius: 10px
+    border-radius: 0.25em
+    border-radius: 0.25em
     z-index: 900
     &::before
       content: ""
@@ -225,11 +225,11 @@ a
     &::after
       content: ""
       position: absolute
-      width: 1.182em
-      height: 1.2em
-      top: .155em
-      right: -0.6em
-      border-radius: 0.625em
+      width: 1.13em
+      height: 1.13em
+      top: .177em
+      right: -0.42em
+      border-radius: 13%
       background-color: white
       transform: rotate(45deg)
       z-index: -1
@@ -286,7 +286,7 @@ a
 .s-posts-start
   @extend %row
   margin-bottom: 1.5em
-  margin-top: 3em
+  margin-top: 50px
 
 .section-pssts-container
   @extend %container
@@ -395,18 +395,16 @@ a
 
 
 
-
-
                       /*--розділ CONTACT US --*/
 
 .s-contact-us
   @extend %row
-  margin-top: 3em
-  
+  margin-top: 50px
+
 .section-contact-container
   @extend %container
   padding: 1em 0
-  height: 320px
+  max-height: 320px
   font-size: 1rem
 
 .layer___33
@@ -426,63 +424,63 @@ a
 .contact-us-box
   display: flex
   justify-content: space-between
-  margin-top: 5em
+  margin: 5em 1.5em 0 1.5em
 
 .section-contact-container
   a
     font-family: 'SourceSansPro', sans-serif
     position: relative
     color: white
-    font-size: 1.2em
+    font-size: 1.3em
     z-index: 140
     &:not(:last-child)
-      margin-right: 100px
+      margin-right: 10vw
     &::before
       content: ''
       display: block
       position: absolute
-      top: -10px
-      left: -25px
+      top: -0.5em
+      left: -1.5em
       width: 0
       height: 0
       opacity: 0.5
-      border-left: solid 5em #48b8ff
-      border-bottom: 5em transparent solid
+      border-left: solid 3em #48b8ff
+      border-bottom: 3em transparent solid
       z-index: -1
       transform: rotate(86deg)
     i
       position: relative
-      margin-right: 1.1em
-      font-size: 2em
+      margin-right: 0.8em
       color: white
       width: 25px
       height: 25px
       z-index: 220
   a:last-child::before
-    top: -35px
-    left: -55px
+    top: -0.7em
+    left: -1.7em
     transform: rotate(110deg)
 
 .section-contact-container
   .adrss-1
+    margin-left: 5vw
     a
       position: relative
-      top: -1.5em
+      top: -2.5em
       display: inline-block
-      margin-right: 0.5em
+      margin-right: 0.2em
       &::before
-        left: -50px
+        left: -1.7em
 
 .adress
   display: inline-block
+  position: relative
+  top: -16px
   span
     display: block
     font-family: 'SourceSansPro', sans-serif
     line-height: 1.5
     color: white
-    font-size: 1.2em
-
-
+    font-size: 1em
 
 
 
@@ -490,7 +488,7 @@ a
                 /*--розділ ABOUT US --*/
 .s-about-us
   @extend %row
-  margin-top: 3em
+  margin-top: 50px
 
 .section-container
   @extend %container
@@ -498,7 +496,7 @@ a
   justify-content: flex-start
   align-items: center
   font-size: 1rem
-  margin-top: 50px
+
 
 //фотографія
 .illustration
@@ -524,6 +522,7 @@ a
 .section-content
   max-width: 60%
   padding: 1em
+  padding-top: 0
 
 .section-title
   font-family: "montserrat", sans-serif
@@ -538,8 +537,11 @@ a
   font-weight: bold
   text-align: left
   line-height: 1.5
-  margin: 0.5em 0
+  margin: 0.5em 0 0 0
 
+.button-box
+  height: 50px
+  margin-top: 40px
 .button
   display: inline-block
   border-radius: 25px
@@ -550,7 +552,6 @@ a
   font-size: 1.2em
   color: white
   box-shadow: 5px 7px 30px 0 #c3c0c0b5
-  margin: 2em 0
   cursor: pointer
   transition: All 0.3s ease
   &:hover
@@ -568,6 +569,7 @@ a
                   /*--розділ WHY US --*/
 .s-why-us
   @extend %row
+  margin-top: 50px
 
 .s-why-us
   .section-container
@@ -577,7 +579,6 @@ a
     flex-direction: row-reverse
     align-items: center
     font-size: 1rem
-    margin-top: 50px
 // решта стилів наслідувана від рзділу ABOUT US
 
 
@@ -587,7 +588,7 @@ a
 
 .s-benefits
   @extend %row
-  margin: 3em 0
+  margin-top: 50px
 
 .s-benefits-container
   @extend %container
@@ -598,7 +599,7 @@ a
   margin: 0
   font-family: 'montserrat', sans-serif
   font-weight: 900
-  font-size: 3em
+  font-size: 50px
   text-align: center
   color: black
 
@@ -622,6 +623,7 @@ a
 .bnf-text-box
   width: 60%
   min-height: 50px
+
 
 
 .bnf-h2
@@ -702,11 +704,10 @@ a
                   /*--  розділ FAQ --*/
 .s-faq
   @extend %row
-  margin-top: 3em
+  margin-top: 50px
 
 .s-faq-container
   @extend %container
-  padding: 2em 0
   max-height: 600px
   font-size: 1rem
 
@@ -718,7 +719,7 @@ a
 .acord-container
   width: 80%
   padding-left: 10%
-  margin: 2em auto 1.5em auto
+  margin: 1.5em auto 1.5em auto
 
 .acord-container
   label
@@ -784,6 +785,7 @@ article
                 /*--розділ POST-NOW--*/
 .s-post-now
   @extend %row
+  margin-top: 50px
 
 .s-post-now
   .section-container
@@ -793,7 +795,7 @@ article
     flex-direction: row-reverse
     align-items: center
     font-size: 1rem
-    margin-top: 50px
+
 // решта стилів наслідувана від рзділу ABOUT US
 
 
@@ -805,7 +807,7 @@ article
 .s-icons-end-container
   @extend %container
   font-size: 1rem
-  margin-bottom: 5em
+  margin-bottom: 80px
 
 .icn-end-box
   display: flex
