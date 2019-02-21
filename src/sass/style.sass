@@ -52,10 +52,11 @@ a
 %icon-template
   &::before
     content: ''
-    background-repeat: no-repea
+    background-repeat: no-repeat
     background-position: center center
     background-size: contain
-    width: 1em
+    width: 0.88em
+    padding: 2px
     height: 1em
     display: inline-block
     vertical-align: bottom
@@ -68,6 +69,7 @@ a
 
 .wrapper
   width: 100vw
+  max-width: 1920px
 
 
 .small-header-row
@@ -256,10 +258,10 @@ a
       display: block
       position: absolute
       top: -0.5em
-      left: -1.5em
+      left: -1.4em
       width: 0
       height: 0
-      opacity: 0.5
+      opacity: 0.3
       border-left: solid 3em #48b8ff
       border-bottom: 3em transparent solid
       z-index: -1
@@ -273,7 +275,7 @@ a
       z-index: 220
   a:last-child::before
     top: -0.7em
-    left: -1.7em
+    left: -1.45em
     transform: rotate(120deg)
 
 
@@ -356,7 +358,7 @@ a
 
 .icon-content
   &::before
-    background: url("../img/icons/posts/svg/content.png") no-repeat
+    background-image: url("../img/icons/posts/svg/content.png")
   @extend %icon-template
   font-size: 2.5em
 
@@ -367,7 +369,7 @@ a
 
 .icon-pay
   &::before
-    background: url("../img/icons/posts/svg/pay.svg") no-repeat
+    background-image: url("../img/icons/posts/svg/pay.svg")
   @extend %icon-template
   font-size: 2.5em
 
@@ -440,10 +442,10 @@ a
       display: block
       position: absolute
       top: -0.5em
-      left: -1.5em
+      left: -1.6em
       width: 0
       height: 0
-      opacity: 0.5
+      opacity: 0.3
       border-left: solid 3em #48b8ff
       border-bottom: 3em transparent solid
       z-index: -1
@@ -457,7 +459,7 @@ a
       z-index: 220
   a:last-child::before
     top: -0.7em
-    left: -1.7em
+    left: -1.8em
     transform: rotate(110deg)
 
 .section-contact-container
@@ -490,37 +492,57 @@ a
   @extend %row
   margin-top: 50px
 
+
 .section-container
   @extend %container
   display: flex
-  justify-content: flex-start
+  justify-content: flex-end
   align-items: center
   font-size: 1rem
-
+  padding: 0 2%
 
 //фотографія
 .illustration
   position: relative
   max-width: 40%
-  margin: 0 2em
+
   img
+    position: relative
     width: 35vw
     height: 23vw
+    max-width: 570px
+    max-height: 380px
     box-shadow: 0 0 30px 5px #d8d8d8, 5px 5px 0 10px white
-.illustration::after
-  content: ''
-  display: inline-block
-  position: absolute
-  width: 35vw
-  height: 23vw
-  top: 27px
-  left: 27px
-  z-index: -1
-  background-image: linear-gradient(to right, #0c3894, #208fc2)
+  &::after
+    content: ''
+    display: inline-block
+    position: absolute
+    width: 35vw
+    height: 23vw
+    max-width: 570px
+    max-height: 380px
+    top: 27px
+    left: 27px
+    z-index: -1
+    background-image: linear-gradient(to right, #0c3894, #208fc2)
 
-//основний текст
+.s-about-us
+  .illustration
+    img
+      position: absolute
+      top: -160px
+      right: 27px
+      left: auto
+    &::after
+      position: absolute
+      top: -160px + 27px
+      right: 0
+      left: auto
+
+
+  //основний текст
 .section-content
-  max-width: 60%
+  width: 60%
   padding: 1em
   padding-top: 0
 
@@ -559,6 +581,7 @@ a
     padding: 1em 2em
     outline: none
     cursor: pointer
+    background-color: blue
   &:active
     background-color: blue
 
@@ -624,8 +647,6 @@ a
   width: 60%
   min-height: 50px
 
-
-
 .bnf-h2
   margin: 0
   margin-bottom: 0.5em
@@ -670,27 +691,27 @@ a
                                       // ITEM-1
 .icon-promote
   &::before
-    background: url("../img/icons/benefits/promote.png") no-repeat
+    background-image: url("../img/icons/benefits/promote.png")
   @extend %icon-template
   font-size: 2.5em
 
                               // ITEM-2
 .icon-rep
   &::before
-    background: url("../img/icons/benefits/rep.png") no-repeat
+    background-image: url("../img/icons/benefits/rep.png")
   @extend %icon-template
   font-size: 2.5em
                                 // ITEM-3
 .icon-search1
   &::before
-    background: url("../img/icons/benefits/search.png") no-repeat
+    background-image: url("../img/icons/benefits/search.png")
   @extend %icon-template
-  font-size: 2.5em
+  font-size: 5.5em
 
                                   // ITEM-4
 .icon-money
   &::before
-    background: url("../img/icons/benefits/money.png") no-repeat
+    background-image: url("../img/icons/benefits/money.png")
   @extend %icon-template
   font-size: 2.5em
 
@@ -735,26 +756,30 @@ a
     color: black
     font-size: 2em
     &:hover
-      color: grey
+      color: black
 
 .acord-container
   input:checked + label, input:checked + label:hover
     color: #0d3693
     border-bottom: none
 .acord-container
-  label:hover::after, input:checked + label:hover::after
-    content: '\f107'
+  label::after, input:checked + label::after
+    content: ""
     position: absolute
-    font-family: fontawesome
-    width: 24px
-    height: 24px
-    right: 13px
-    top: 7px
-    background: transparent url(http://netcribe.com/example/arrow_down.png) no-repeat center center
+    width: 20px
+    height: 20px
+    right: -14px
+    top: 10px
+    color: lightgray
+    background-image: url('../img/icons/angle-down/angle-down-solid.svg')
+    background-repeat: no-repeat
+    //background: transparent url(http://netcribe.com/example/arrow_down.png) no-repeat center center
 .acord-container
   input:checked + label:hover::after
-    content: ' \f106 '
-    background-image: url(http://netcribe.com/example/arrow_up.png)
+    content: ""
+    color: black
+    background-image: url('../img/icons/angle-down/angle-up-solid.svg')
+    background-repeat: no-repeat
 .acord-container
   input
     display: none
@@ -786,6 +811,7 @@ article
 .s-post-now
   @extend %row
   margin-top: 50px
+
 
 .s-post-now
   .section-container
@@ -841,7 +867,7 @@ article
 
 .icon-guest
   &::before
-    background: url("../img/icons/end-icons/guest.png") no-repeat
+    background-image: url("../img/icons/end-icons/guest.png")
   @extend %icon-template
   font-size: 2.5em
 
@@ -851,7 +877,7 @@ article
 
 .icon-news
   &::before
-    background: url("../img/icons/end-icons/news.png") no-repeat
+    background-image: url("../img/icons/end-icons/news.png")
   @extend %icon-template
   font-size: 2.5em
 
@@ -861,7 +887,7 @@ article
 
 .icon-edu
   &::before
-    background: url("../img/icons/end-icons/edu.png") no-repeat
+    background-image: url("../img/icons/end-icons/edu.png")
   @extend %icon-template
   font-size: 2.5em
 

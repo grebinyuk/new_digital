@@ -20,9 +20,24 @@
               /*--розділ ABOUT US --*/
   .section-container
     font-size: 0.9em
+    padding-right: 4%
 
   .section-title
     font-size: 2.8em
+
+//застосовуються лише для розділу ABOUT US
+.s-about-us
+  .section-container
+  .illustration
+    left: 0
+    img
+      position: relative
+      top: 0
+      left: -27px
+    &::after
+      position: absolute
+      top: 27px
+      left: 0
 
 
 
@@ -164,6 +179,26 @@
 
   .paragraph
     font-size: 14px
+    font-weight: 400
+  .illustration
+    align-self: flex-start
+    top: 100px
+    img
+      box-shadow: 0 0 30px 0px #d8d8d8, 4px 4px 0 4px white
+    &::after
+      top: 17px
+      left: 17px
+
+  .s-about-us
+    .illustration
+      padding-left: 4%
+      img
+        align-self: flex-start
+        margin-left: 4%
+        box-shadow: 0 0 30px 0px #d8d8d8, 5px 5px 0 5px white
+      &::after
+        top: 18px
+        left: 9%
 
 
 
@@ -214,6 +249,7 @@
     font-size: 2em
 
 
+
                   /*-- розділ BENEFITS --*/
 
   .s-benefits
@@ -246,6 +282,12 @@
   .bnf-h2, .bnf-posts-paragraph
     text-align: center
 
+  .icon-promote, .icon-rep, .icon-search1, .icon-money
+    font-size: 2em
+    background-repeat: no-repeat
+
+  .icon-search1
+    font-size: 5em
 
       /*--  розділ FAQ --*/
   .s-faq
@@ -278,7 +320,8 @@
     .end-text-box
       font-size: 0.75em
 
-
+  .icon-edu, .icon-news,.icon-guest
+    font-size: 2em
 
               /*FOOTER*/
 
@@ -380,6 +423,10 @@
                   /*--розділ WHY US --*/
   .s-why-us
     margin-top: 25px
+  .button
+    font-size: 1em
+    margin-left: 18%
+    margin-right: auto
 
 
                     /*--розділ ABOUT US --*/
@@ -392,12 +439,11 @@
     width: 0
     display: none
   .section-content
-    max-width: 100%
-    margin-left: 10px
-    margin-right: 10px
+    width: 100%
+    margin-left: auto
+    margin-right: auto
 
-  .paragraph
-    font-weight: 400
+
 
   .button-box
     width: 100%
@@ -467,7 +513,7 @@
 
   .acord-container
     label
-      font-size: 17px
+      font-size: 15px
       padding-top: 28px 0 7px 0
 
   .acord-container
@@ -477,7 +523,7 @@
   article
     p
       line-height: 1.5
-      font-size: 12px
+      font-size: 11px
 
   .acord-container
     width: 80%
