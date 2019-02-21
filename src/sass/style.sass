@@ -65,11 +65,10 @@ a
 
 
 
-
-
 .wrapper
   width: 100vw
   max-width: 1920px
+  margin: 0 auto
 
 
 .small-header-row
@@ -275,7 +274,7 @@ a
       z-index: 220
   a:last-child::before
     top: -0.7em
-    left: -1.45em
+    left: -1.7em
     transform: rotate(120deg)
 
 
@@ -527,17 +526,18 @@ a
     background-image: linear-gradient(to right, #0c3894, #208fc2)
 
 .s-about-us
-  .illustration
-    img
-      position: absolute
-      top: -160px
-      right: 27px
-      left: auto
-    &::after
-      position: absolute
-      top: -160px + 27px
-      right: 0
-      left: auto
+  .section-container
+    .illustration
+      img
+        position: absolute
+        top: -160px
+        right: 30px
+        left: auto
+      &::after
+        position: absolute
+        top: -160px + 27px
+        right: 0
+        left: auto
 
 
   //основний текст
