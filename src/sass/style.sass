@@ -66,10 +66,16 @@ a
 
 
 .wrapper
-  width: 100vw
+  width: 100%
   max-width: 1920px
   margin: 0 auto
 
+
+/*-------------------------------------------------
+
+                  HEADER
+
+  ------------------------------------------------*/
 
 .small-header-row
   @extend %row
@@ -166,10 +172,12 @@ a
 
 
 
+/*-------------------------------------------------
 
+                  FEATURE POSTS
 
+  ------------------------------------------------*/
 
-                    /*розділ FEATURE POSTS*/
 .f-posts-box
   @extend %row
   max-height: 700px
@@ -256,8 +264,8 @@ a
       content: ''
       display: block
       position: absolute
-      top: -0.5em
-      left: -1.4em
+      top: -13px
+      left: -47px
       width: 0
       height: 0
       opacity: 0.3
@@ -267,27 +275,27 @@ a
       transform: rotate(96deg)
     i
       position: relative
-      margin-right: 1.2em
+      margin-right: 25px
       color: white
       width: 25px
       height: 25px
       z-index: 220
   a:last-child::before
-    top: -0.7em
-    left: -1.7em
-    transform: rotate(120deg)
+    transform: rotate(105deg)
 
 
 
 
+/*-------------------------------------------------
 
+                  POSTS STAART
 
+  ------------------------------------------------*/
 
-                                    /*--розділ POSTS STAART --*/
 .s-posts-start
   @extend %row
   margin-bottom: 1.5em
-  margin-top: 50px
+  margin-top: 60px
 
 .section-pssts-container
   @extend %container
@@ -307,6 +315,7 @@ a
   display: flex
   justify-content: space-between
   width: 100%
+  max-height: 800px
   margin-top: 1.5em
 //
 .posts-start-item
@@ -337,9 +346,7 @@ a
 
   //Розміри текстової частини
 .text-box
-  min-height: 50px
-  height: 10em
-  max-height: 12em
+  max-height: 14em
   padding-bottom: 1.5em
 
 .posts-paragraph
@@ -359,7 +366,7 @@ a
   &::before
     background-image: url("../img/icons/posts/svg/content.png")
   @extend %icon-template
-  font-size: 2.5em
+  font-size: 2.2em
 
 
                       // ITEM-2
@@ -370,7 +377,7 @@ a
   &::before
     background-image: url("../img/icons/posts/svg/pay.svg")
   @extend %icon-template
-  font-size: 2.5em
+  font-size: 2.2em
 
                             // ITEM-3
 .trg-rotate-itm-3
@@ -380,7 +387,8 @@ a
   &::before
     background-image: url("../img/icons/posts/svg/ellipse.png")
   @extend %icon-template
-  font-size: 2.3em
+  font-size: 2.1em
+  margin-left: 15px
 
                       // ITEM-4
 .trg-rotate-itm-4
@@ -390,17 +398,21 @@ a
   &::before
     background-image: url("../img/icons/posts/svg/procent.png")
   @extend %icon-template
-  font-size: 2.6em
+  font-size: 2.1em
 
 
 
 
 
-                      /*--розділ CONTACT US --*/
+/*-------------------------------------------------
+
+                  CONTACT US
+
+  ------------------------------------------------*/
 
 .s-contact-us
   @extend %row
-  margin-top: 50px
+  margin-top: 60px
 
 .section-contact-container
   @extend %container
@@ -448,7 +460,7 @@ a
       border-left: solid 3em #48b8ff
       border-bottom: 3em transparent solid
       z-index: -1
-      transform: rotate(86deg)
+      transform: rotate(110deg)
     i
       position: relative
       margin-right: 0.8em
@@ -457,9 +469,9 @@ a
       height: 25px
       z-index: 220
   a:last-child::before
-    top: -0.7em
-    left: -1.8em
-    transform: rotate(110deg)
+    top: -0.45em
+    left: -1.7em
+    transform: rotate(98deg)
 
 .section-contact-container
   .adrss-1
@@ -485,11 +497,15 @@ a
 
 
 
+/*-------------------------------------------------
 
-                /*--розділ ABOUT US --*/
+                  ABOUT US
+
+  ------------------------------------------------*/
+
 .s-about-us
   @extend %row
-  margin-top: 50px
+  margin-top: 60px
 
 
 .section-container
@@ -500,7 +516,7 @@ a
   font-size: 1rem
   padding: 0 2%
 
-//фотографія
+          //фотографія
 .illustration
   position: relative
   max-width: 40%
@@ -509,8 +525,8 @@ a
     position: relative
     width: 35vw
     height: 23vw
-    max-width: 570px
-    max-height: 380px
+    max-width: 540px
+    max-height: 350px
     box-shadow: 0 0 30px 5px #d8d8d8, 5px 5px 0 10px white
   &::after
     content: ''
@@ -518,8 +534,8 @@ a
     position: absolute
     width: 35vw
     height: 23vw
-    max-width: 570px
-    max-height: 380px
+    max-width: 540px
+    max-height: 350px
     top: 27px
     left: 27px
     z-index: -1
@@ -540,7 +556,7 @@ a
         left: auto
 
 
-  //основний текст
+      //основний текст
 .section-content
   width: 60%
   padding: 1em
@@ -588,11 +604,15 @@ a
 
 
 
+/*-------------------------------------------------
 
-                  /*--розділ WHY US --*/
+                    WHY US
+
+  ------------------------------------------------*/
+
 .s-why-us
   @extend %row
-  margin-top: 50px
+  margin-top: 60px
 
 .s-why-us
   .section-container
@@ -606,12 +626,15 @@ a
 
 
 
+/*-------------------------------------------------
 
-              <!--розділ BENEFITS -->
+                    BENEFITS
+
+  ------------------------------------------------*/
 
 .s-benefits
   @extend %row
-  margin-top: 50px
+  margin-top: 60px
 
 .s-benefits-container
   @extend %container
@@ -693,7 +716,7 @@ a
   &::before
     background-image: url("../img/icons/benefits/promote.png")
   @extend %icon-template
-  font-size: 2.5em
+  font-size: 2.1em
 
                               // ITEM-2
 .icon-rep
@@ -706,52 +729,52 @@ a
   &::before
     background-image: url("../img/icons/benefits/search.png")
   @extend %icon-template
-  font-size: 5.5em
+  font-size: 5.6em
 
                                   // ITEM-4
 .icon-money
   &::before
     background-image: url("../img/icons/benefits/money.png")
   @extend %icon-template
-  font-size: 2.5em
+  font-size: 2.2em
+  margin-left: 10px
 
 
 
+/*-------------------------------------------------
 
+                    FAQ
 
-
-
-
-                  /*--  розділ FAQ --*/
+  ------------------------------------------------*/
 .s-faq
   @extend %row
-  margin-top: 50px
+  margin-top: 60px
 
 .s-faq-container
   @extend %container
-  max-height: 600px
+  max-height: 850px
   font-size: 1rem
 
 .faq-title
   @extend .posts-start-title
   text-align: left
-  padding-left: 20%
+  padding-left: 5%
 
 .acord-container
   width: 80%
   padding-left: 10%
-  margin: 1.5em auto 1.5em auto
+  margin: 1.5em auto 1.5em 4em
 
 .acord-container
   label
     font-family: 'SourceSansPro', sans-serif
-    padding: 10px 0 0 0
+    padding: 30px 30px 0 0
     position: relative
     z-index: 20
     display: block
     height: auto
     cursor: pointer
-    line-height: 2.1em
+    line-height: 1.5
     border-bottom: 1px solid lightgray
     color: black
     font-size: 2em
@@ -768,12 +791,12 @@ a
     position: absolute
     width: 20px
     height: 20px
-    right: -14px
-    top: 10px
+    right: 5px
+    top: 35px
     color: lightgray
     background-image: url('../img/icons/angle-down/angle-down-solid.svg')
     background-repeat: no-repeat
-    //background: transparent url(http://netcribe.com/example/arrow_down.png) no-repeat center center
+
 .acord-container
   input:checked + label:hover::after
     content: ""
@@ -806,11 +829,15 @@ article
 
 
 
+/*-------------------------------------------------
 
-                /*--розділ POST-NOW--*/
+                    POST-NOW
+
+  ------------------------------------------------*/
+
 .s-post-now
   @extend %row
-  margin-top: 50px
+  margin-top: 60px
 
 
 .s-post-now
@@ -895,12 +922,11 @@ article
 
 
 
+/*-------------------------------------------------
 
+                    FOOTER
 
-
-
-
-    /*==== FOOTER ====*/
+  ------------------------------------------------*/
 
 .footer-row
   @extend %row
@@ -914,7 +940,7 @@ article
   height: 100%
   align-items: center
 
-          // ЛОГОТИП
+                    // ЛОГОТИП
 .footer-logo
   font-family: 'montserrat', sans-serif
   font-weight: bold
@@ -923,7 +949,7 @@ article
   color: #fff
 
 
-            // МЕНЮ
+                      // МЕНЮ
 #footer-menu
   list-style: none
   li
@@ -936,7 +962,7 @@ article
     a
       color: #fff
 
-  // social icons
+                    // social icons
 .footer-social-icons
   .social-icon
     display: inline-block

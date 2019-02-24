@@ -15,6 +15,10 @@
               /*розділ FEATURE POSTS*/
   .feature-posts
     font-size: 0.8rem
+    a
+      &::before
+        top: -11px
+        left: -37px
 
 
               /*--розділ ABOUT US --*/
@@ -25,19 +29,19 @@
   .section-title
     font-size: 2.8em
 
-//застосовуються лише для розділу ABOUT US
-.s-about-us
-  .section-container
-  .illustration
-    left: 0
-    img
-      position: relative
-      top: 0
-      left: -27px
-    &::after
-      position: absolute
-      top: 27px
+    //застосовуються лише для розділу ABOUT US
+  .s-about-us
+    .section-container
+    .illustration
       left: 0
+      img
+        position: relative
+        top: 0
+        left: -27px
+      &::after
+        position: absolute
+        top: 27px
+        left: 0
 
 
 
@@ -46,6 +50,7 @@
     font-size: 0.9rem
   .posts-start-box
     font-size: 0.9em
+
 
 
 
@@ -66,11 +71,23 @@
 
 
         /*FOOTER*/
+
+
   #footer-menu
     li
       &:not(:last-child)
-        margin-right: 1.5em
+        margin-right: 1.8em
 
+  .footer-social-icons
+    margin-right: 14px
+    .social-icon
+        font-size: 1.5em
+        line-height: 1.6em
+        margin-right: 10px
+
+  .footer-logo
+    font-size: 2em
+    margin-left: 1.4em
 
 
 /* Medium Devices, Desktops */
@@ -99,16 +116,16 @@
 
     /*FOOTER HEADER*/
   #footer-menu
-    font-size: 1.15em
+    font-size: 1em
     li
       &:not(:last-child)
-        margin-right: 12px
+        margin-right: 18px
 
   .footer-social-icons
     margin-right: 5px
     .social-icon
         font-size: 1.1em
-        line-height: 1.5em
+        line-height: 1.6em
         margin-right: 8px
 
   .footer-logo
@@ -143,12 +160,17 @@
     font-size: 0.6rem
     a
       font-size: 1.45em
-    a:last-child::before
-      left: -1.4em
+      &::before
+        top: -7px
+        left: -19px
+      i
+        margin-right: 10px
+
+
 
                   /*--розділ CONTACT US --*/
   .s-contact-us
-    margin-top: 30px
+    margin-top: 40px
 
   .s-contacts-title
     font-size: 30px
@@ -164,6 +186,14 @@
       i
         margin-right: 2px
 
+  .section-contact-container
+    .adrss-1
+      a
+        top: -2.5em
+        &::before
+          top: -0.8em
+          left: -1.9em
+
   .adress
     position: relative
     top: -16px
@@ -174,7 +204,7 @@
 
               /*-- розділ ABOUT US --*/
   .s-about-us
-      margin-top: 30px
+      margin-top: 40px
 
   .section-title
     font-size: 30px
@@ -182,45 +212,45 @@
   .paragraph
     font-size: 14px
     font-weight: 400
-  .illustration
-    align-self: flex-start
-    top: 100px
-    img
-      box-shadow: 0 0 30px 0px #d8d8d8, 4px 4px 0 4px white
-    &::after
-      top: 17px
-      left: 17px
+
 
   .s-about-us
-    .illustration
-      padding-left: 4%
-      img
-        align-self: flex-start
-        margin-left: 4%
-        box-shadow: 0 0 30px 0px #d8d8d8, 5px 5px 0 5px white
-      &::after
-        top: 18px
-        left: 9%
-
+    .section-container
+      .illustration
+        padding-left: 0
+        top: -5vw
+        width: 40%
+        img
+          position: relative
+          align-self: flex-start
+          top: -0px
+          left: -0px
+          width: 94%
+          height: 94%
+          box-shadow: 0 0 30px 0px #d8d8d8, 5px 5px 0 5px white
+        &::after
+          top: 24px
+          left: 24px
 
 
                   /*--розділ WHY US --*/
   .s-why-us
-    margin-top: 30px
+    margin-top: 40px
 
 
-    /*--розділ POST-NOW--*/
+                /*--розділ POST-NOW--*/
   .s-post-now
-    margin-top: 30px
+    margin-top: 40px
 
   .s-post-now
     .section-container
       font-size: 14px
 
-              /*--розділ POSTS STAART --*/
 
+
+              /*--розділ POSTS START --*/
   .s-posts-start
-    margin-top: 30px
+    margin-top: 40px
   .posts-start-title
     font-size: 30px
 
@@ -228,7 +258,7 @@
     flex-direction: column
     justify-content: flex-end
     flex-wrap: wrap
-    max-height: 600px
+    max-height: 520px
     font-size: 0.75em
 
   .posts-start-item
@@ -237,8 +267,7 @@
   .triangle-box
     margin-top: 0
 
-  .text-box
-    height: 80px
+
 
   .clip-path
     position: absolute
@@ -249,13 +278,17 @@
 
   .icon-content, .icon-pay, .icon-ellipse, .icon-procent
     font-size: 2em
+  .icon-content, .icon-pay, .icon-ellipse
+    &::before
+      margin-right: 10px
+
 
 
 
                   /*-- розділ BENEFITS --*/
 
   .s-benefits
-    margin-top: 30px
+    margin-top: 40px
 
   .bnf-benefits-box
     justify-content: center
@@ -286,18 +319,26 @@
 
   .icon-promote, .icon-rep, .icon-search1, .icon-money
     font-size: 2em
+    margin-top: 10px
+    margin-right: 10px
     background-repeat: no-repeat
 
+  .icon-promote
+    font-size: 1.8em
   .icon-search1
-    font-size: 5em
+    font-size: 5.5em
+    &::before
+      margin-top: 30px
 
-      /*--  розділ FAQ --*/
+
+
+              /*--  розділ FAQ --*/
   .s-faq
-    margin-top: 30px
+    margin-top: 40px
   .faq-title
-    padding-left: 10%
+    padding-left: 5%
   .acord-container
-    padding-left: 0
+    padding-left: 2em
     label
       font-size: 1.2em
       line-height: 1.2em
@@ -307,12 +348,15 @@
     margin: 0
     font-size: 1em
 
+  .acord-container
+    label::after, input:checked + label::after
+      top: 25px
 
                   //ІКОНКИ В КІНЦІ
 
                             // іконки в кінці розділу
   .s-icons-end
-    margin-top: 40px
+    margin-top: 50px
 
   .s-icons-end-container
     margin-bottom: 50px
@@ -324,9 +368,11 @@
 
   .icon-edu, .icon-news,.icon-guest
     font-size: 2em
+    &::before
+      margin-right: 10px
+
 
               /*FOOTER*/
-
   .footer-row
     height: 170px
 
@@ -376,13 +422,16 @@
     a
       font-size: 1.3em
       &::before
-        left: -0.8em
-    a:last-child::before
-      left: -0.85em
+        top: -4px
+        left: -6px
+      i
+        margin-right: 5px
+
+
 
                       /*розділ CONTACTS*/
   .s-contact-us
-    margin-top: 25px
+    margin-top: 30px
 
   .s-contacts-title
     font-size: 25px
@@ -402,17 +451,17 @@
         left: 30px
     a:last-child::before
       top: -36px
-      left: 12px
+      left: 13px
 
   .section-contact-container
     .adrss-1
       margin-left: 0
       a
         &::before
-          top: -44px
-          left: 33px
+          top: -46px
+          left: 31px
         i
-          top: -40px
+          top: -38px
           left: 50px
 
   .adress
@@ -422,18 +471,20 @@
       font-size: 9px
 
 
+
                   /*--розділ WHY US --*/
   .s-why-us
-    margin-top: 25px
+    margin-top: 30px
   .button
     font-size: 1em
     margin-left: 18%
     margin-right: auto
 
 
+
                     /*--розділ ABOUT US --*/
   .s-posts-start
-    margin-top: 25px
+    margin-top: 30px
   .section-title
     font-size: 25px
 
@@ -445,8 +496,6 @@
     margin-left: auto
     margin-right: auto
 
-
-
   .button-box
     width: 100%
 
@@ -455,10 +504,11 @@
     margin-right: auto
 
 
+
                     /*--розділ POSTS STAART --*/
 
   .s-posts-start
-    margin-top: 25px
+    margin-top: 30px
 
   .posts-start-title
     font-size: 25px
@@ -466,12 +516,11 @@
     margin: 0 auto
 
   .posts-start-box
-    max-height: 510px
     font-size: 0.65em
+    max-height: 500px
 
   .text-box
-    height: 60px
-    max-height: 70px
+    max-height: 150px !important
     font-size: 0.9em
 
   .clip-path
@@ -487,7 +536,7 @@
 
                     /*-- розділ BENEFITS --*/
   .s-benefits
-    margin-top: 25px
+    margin-top: 30px
 
   .bnf-benefits-box
     margin-top: 0
